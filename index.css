@@ -1,0 +1,574 @@
+* {
+    font-family: 'Inter', sans-serif;
+    color: #676767;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  /* Контейнер для баннера */
+.banner-container {
+  position: relative;  /* Нужно для позиционирования текста */
+  width: 100%;
+}
+
+/* Стиль текста */
+.banner-text {
+  position: absolute;
+  top: 20px;  /* Расстояние от верхней части контейнера */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  z-index: 10; /* Обеспечивает, чтобы текст был сверху */
+  font-weight: bold;
+}
+
+/* Основной баннер */
+.main-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+  
+  input {
+    box-shadow: none;
+    display: block;
+  }
+  
+  button {
+    border: none;
+  }
+  
+  
+  
+  .header-container {
+    height: 60px;
+    padding: 9px 64px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16);
+    background-color: white;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 44px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 34px; 
+    letter-spacing: -0.48px;
+  }
+  
+  .content-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 600px;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  
+  .subtitle {
+    font-size: 15px;
+    margin-bottom: 64px;
+  }
+  
+  .input {
+    width: 350px;
+    height: 50px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--Gray-1, #DCDCDC);
+    margin-bottom: 24px;
+    padding-left: 20px;
+  }
+  
+  .textarea {
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--Gray-1, #DCDCDC);
+    margin-bottom: 24px;
+  }
+  
+  .button {
+    width: 350px;
+    height: 50px;
+    padding: 0px 14px;
+    border-radius: 20px;
+    background: var(--Purple-Accent, #6E51E0);
+    color:var(--White, #FFF);
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .button:hover {
+    background: #7d62e6; 
+  }
+  
+  .button:active {
+    transform: scale(0.98); 
+  }
+  .head {
+    position: absolute;
+    top: 0; /* Поднимает вверх */
+    right: 0; /* Прижимает к правому краю */
+    padding: 10px; /* Добавляет отступы для красоты */
+}
+
+.head ul {
+    list-style: none; /* Убираем точки */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Делаем горизонтальным */
+}
+
+.head ul li {
+    margin-left: 20px; /* Отступы между пунктами */
+}
+
+.head ul li a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: black; /* Цвет ссылок */
+    font-weight: bold; /* Делаем текст жирным */
+}
+.menu {
+    display: flex;
+    justify-content: center; /* Выравниваем меню по центру */
+    background-color: #f8f8f8; /* Цвет фона */
+    padding: 10px 0; /* Отступ сверху и снизу */
+    border-bottom: 2px solid #ddd; /* Линия снизу */
+}
+
+.menu ul {
+    list-style: none; /* Убираем точки */
+    display: flex;
+    gap: 20px; /* Отступы между пунктами */
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: black; /* Цвет ссылок */
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #e74c3c; /* Красный цвет при наведении */
+}
+.menu {
+    display: flex;
+    justify-content: space-between; /* Раздвигаем элементы */
+    align-items: center; /* Выравниваем по центру */
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Контейнер для кнопок справа */
+.menu-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Стиль кнопки корзины */
+.cart {
+    background-color: #ff9800; /* Оранжевый */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Стиль кнопки войти */
+.login {
+    background-color: #d3d3d3; /* Светло-серый */
+    color: black;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cart:hover {
+    background-color: #e68900; /* Темнее при наведении */
+}
+
+.login:hover {
+    background-color: #bcbcbc; /* Темнее при наведении */
+}
+html {
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+
+section {
+    padding: 100px 20px; /* Пространство вокруг секций */
+    min-height: 500px; /* Чтобы было что прокручивать */
+}
+/* Стиль для карточки товара */
+.pizza-card {
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .pizza-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pizza-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .pizza-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .pizza-card p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .pizza-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 10px 0;
+  }
+  
+  .pizza-card .order-button {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pizza-card .order-button:hover {
+    background-color: #e68900; /* Более темный оранжевый при наведении */
+  }
+/* Модальное окно */
+.modal {
+    display: none; /* Изначально скрыто */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+    overflow: auto;
+    padding-top: 100px;
+    text-align: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .modal h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .modal .button {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal .button:hover {
+    background-color: #e68900;
+  }
+
+form {
+  background: #ff6600;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+form {
+  background: #ff6600;
+  margin:50px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  width: 300px;
+  height: 500px;
+}
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+input, select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+}
+button {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+button:hover {
+  background: white;
+  color: black;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+button {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: white;
+  color: black;
+}
+iframe {
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  border-radius: 10px;
+  margin:50px;
+}
+/*Футер*/
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-top {
+    background-color: #ff6600;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.footer-top button {
+    background-color:white;
+    color: #e68900;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.footer-section {
+    margin: 10px;
+    max-width: 200px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-download {
+    text-align: right;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.download-links img {
+    width: 80px;
+    margin: 5px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #111;
+    font-size: 14px;
+}
+
+.copyright {
+    padding-left: 20px;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline ;
+} 
+/*optimization*/
+@media (max-width: 768px) {
+  .header-container {
+    padding: 9px 20px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .menu-buttons {
+    justify-content: center;
+  }
+
+  .pizza-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .menu ul {
+    gap: 10px;
+  }
+
+  .cart, .login {
+    padding: 5px 10px;
+  }
+}
